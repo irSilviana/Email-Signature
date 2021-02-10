@@ -49,6 +49,10 @@ hr {
   border: 0.7px solid #84ab79;
 }
 
+table td {
+  padding: 15px;
+}
+
 .app-wrapper {
   margin-top: 30px;
 }
@@ -96,6 +100,7 @@ hr {
 .contact li {
   color: #000000;
   font-size: 12px;
+  margin: 5px 0;
   text-decoration: none;
 }
 
