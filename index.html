@@ -36,7 +36,7 @@
                 <form class="signature">
                   <div class="row mb-1">
                     <label for="firstName" class="col-sm col-form-label"
-                      >First Name</label
+                      >First Name<sup class="required">*(required)</sup></label
                     >
                     <div class="col-sm">
                       <input
@@ -62,7 +62,7 @@
                   </div>
                   <div class="row mb-1">
                     <label for="jobTitle" class="col-sm col-form-label"
-                      >Job Title</label
+                      >Job Title<sup class="required">*(required)</sup></label
                     >
                     <div class="col-sm">
                       <input
@@ -127,7 +127,7 @@
                   </div>
                   <div class="row mb-1">
                     <label for="emailAddress" class="col-sm col-form-label"
-                      >Email
+                      >Email<sup class="required">*(required)</sup>
                       <address></address
                     ></label>
                     <div class="col-sm-6">
@@ -155,7 +155,7 @@
           </div>
           <!-- Right Column -->
           <div class="col">
-            <div class="card">
+            <div class="card invisible" id="card">
               <div class="card-body">
                 <div class="row">
                   <!--left column -->
@@ -172,7 +172,7 @@
             <div class="col-7">
               <div class="card border-0">
                 <div class="card-body">
-                  <div id="copySignature">
+                  <div id="copySignature" class="invisible">
                     <textarea
                       name="signatureOutput"
                       id="signatureHtml"

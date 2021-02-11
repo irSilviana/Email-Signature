@@ -1,15 +1,107 @@
+function capitalizeFirstLetter(words) {
+  var separateWord = words.toLowerCase().split(" ");
+  for (var i = 0; i < separateWord.length; i++) {
+    separateWord[i] =
+      separateWord[i].charAt(0).toUpperCase() + separateWord[i].substring(1);
+  }
+  return separateWord.join(" ");
+}
+
 function handleSubmit(event) {
   event.preventDefault();
 
-  let firstName = document.querySelector("#firstName-input").value;
-  let lastName = document.querySelector("#lastName-input").value;
-  let jobTitle = document.querySelector("#jobTitle-input").value;
-  let customField = document.querySelector("#customField-input").value;
-  let department = document.querySelector("#department-input").value;
+  let firstName = capitalizeFirstLetter(
+    document.querySelector("#firstName-input").value
+  );
+  let lastName = capitalizeFirstLetter(
+    document.querySelector("#lastName-input").value
+  );
+  let jobTitle = capitalizeFirstLetter(
+    document.querySelector("#jobTitle-input").value
+  );
+  let customField = capitalizeFirstLetter(
+    document.querySelector("#customField-input").value
+  );
+  let department = capitalizeFirstLetter(
+    document.querySelector("#department-input").value
+  );
   let officePhone = document.querySelector("#officePhone-input").value;
   let mobilePhone = document.querySelector("#mobilePhone-input").value;
   let emailAddress = document.querySelector("#emailAddress-input").value;
+
   let signatureOutput = document.querySelector("#signatureHtml");
+
+  function checkDepartment() {
+    if (department !== "") {
+      department = `${department} | `;
+    }
+  }
+  checkDepartment();
+
+  let phoneIcon = `<span
+                    style="
+                      display: block;
+                      background-color: #84ac7a;
+                    "
+                    ><img
+                      style="
+                        display: block;
+                        background-color: #84ac7a;
+                      "
+                      src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
+                      alt=""
+                      width="13"
+                  /></span>`;
+
+  function showPhoneIcon() {
+    if (officePhone !== "" || mobilePhone !== "") {
+      return phoneIcon;
+    } else {
+      phoneIcon = ``;
+    }
+  }
+  showPhoneIcon();
+
+  let phoneNumber = "";
+
+  let officePh = ` <a
+                    style="
+                    font-size: medium;font-family: Arial;
+                      text-decoration: none;
+                      color: #000000;
+                      font-size: 12px;
+                    "
+                    href="tel:${officePhone}"
+                    >${officePhone}</a>`;
+
+  let mobilePh = `<a
+                    style="
+                      text-decoration: none;
+                      color: #000000;
+                      font-size: 12px;
+                    "
+                    href="tel:${mobilePhone}"
+                    >${mobilePhone}</a>`;
+
+  function checkPhoneNumber() {
+    if (officePhone !== "" && mobilePhone !== "") {
+      phoneNumber = ` ${officePh} | ${mobilePh}`;
+    } else if (officePhone === "" && mobilePhone !== "") {
+      phoneNumber = `${mobilePh}`;
+    } else if ((officePhone !== "") & (mobilePhone === "")) {
+      phoneNumber = `${officePh}`;
+    } else {
+      return phoneNumber;
+    }
+  }
+
+  checkPhoneNumber();
+
+  let card = document.querySelector("#card");
+  let copySignature = document.querySelector("#copySignature");
+
+  card.setAttribute("class", "visible");
+  copySignature.setAttribute("class", "visible");
 
   let signature = document.querySelector("#signatureGenerated");
 
@@ -24,7 +116,7 @@ function handleSubmit(event) {
               display: block;
               margin: 0 auto;
             "
-            src="https://www.dropbox.com/s/85wgqa4fjo2a8m3/nwl_circle_green.png?raw=1"
+            src="https://nwl-signature.netlify.app/images/nwl_circle_green.png"
             alt=""
             width="130"
           /></a>
@@ -78,7 +170,7 @@ function handleSubmit(event) {
             "
           >
             <strong
-              >${department} | Natural Way Of Living</strong
+              >${department}Natural Way Of Living</strong
             >
           </p>
         </td>
@@ -157,42 +249,11 @@ function handleSubmit(event) {
             <tbody>
               <tr>
                 <td>
-                  <span
-                    style="
-                      display: block;
-                      background-color: #84ac7a;
-                    "
-                    ><img
-                      style="
-                        display: block;
-                        background-color: #84ac7a;
-                      "
-                      src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
-                      alt=""
-                      width="13"
-                  /></span>
+                  ${phoneIcon}
                 </td>
                 <td>&nbsp;</td>
                 <td>
-                  <a
-                    style="
-                      text-decoration: none;
-                      color: #000000;
-                      font-size: 12px;
-                    "
-                    href="tel:${officePhone}"
-                    >${officePhone}</a
-                  >
-                  |
-                  <a
-                    style="
-                      text-decoration: none;
-                      color: #000000;
-                      font-size: 12px;
-                    "
-                    href="tel:${mobilePhone}"
-                    >${mobilePhone}</a
-                  >
+                 ${phoneNumber}
                 </td>
               </tr>
               <tr>
@@ -260,7 +321,8 @@ function handleSubmit(event) {
         </td>
       </tr>
     </tbody>
-  </table>`;
+  </table>
+  `;
 
   signatureOutput.innerHTML = signature.innerHTML;
 }

@@ -10,14 +10,14 @@ h1 {
   font-weight: 500;
 }
 
-h2,
 h3 {
-  margin: 0;
+  font-weight: 600;
 }
 
 h2,
 h3,
 p {
+  margin: 0;
   text-transform: capitalize;
 }
 
@@ -125,4 +125,8 @@ a.social-media {
   text-transform: lowercase;
   padding: 0;
   margin: 0;
+}
+
+.required {
+  color: red;
 }
