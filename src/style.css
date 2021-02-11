@@ -103,9 +103,11 @@ img.youtube {
 }
 
 .contact-icon {
+  background-color: #84ac7a;
   color: #84ab79;
   font-size: 13px;
   margin-right: 10px;
+  width: 13px;
 }
 
 .contact li {
