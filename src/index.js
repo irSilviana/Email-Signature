@@ -16,15 +16,9 @@ function handleSubmit(event) {
   let lastName = capitalizeFirstLetter(
     document.querySelector("#lastName-input").value
   );
-  let jobTitle = capitalizeFirstLetter(
-    document.querySelector("#jobTitle-input").value
-  );
-  let customField = capitalizeFirstLetter(
-    document.querySelector("#customField-input").value
-  );
-  let department = capitalizeFirstLetter(
-    document.querySelector("#department-input").value
-  );
+  let jobTitle = document.querySelector("#jobTitle-input").value;
+  let customField = document.querySelector("#customField-input").value;
+  let department = document.querySelector("#department-input").value;
   let officePhone = document.querySelector("#officePhone-input").value;
   let mobilePhone = document.querySelector("#mobilePhone-input").value;
   let emailAddress = document.querySelector("#emailAddress-input").value;
@@ -105,8 +99,7 @@ function handleSubmit(event) {
 
   let signature = document.querySelector("#signatureGenerated");
 
-  signature.innerHTML = `
-  <table style="min-width:500px; vertical-align: -webkit-baseline-middle; font-size: medium;font-family: Arial;" cellspacing="0" cellpadding="0">
+  signature.innerHTML = `<table style="min-width:500px; vertical-align: -webkit-baseline-middle; font-size: medium;font-family: Arial;" cellspacing="0" cellpadding="0">
     <tbody>
       <tr style="height: 130px">
         <td style="height: 130px"><a href="https://naturalwayofliving.com/" target="_blank">
