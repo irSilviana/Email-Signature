@@ -29,7 +29,7 @@ function handleSubmit(event) {
                               <img
                                 style="max-width: 130px; text-align: center"
                                 role="presentation"
-                                src="/images/nwl_circle_green.png"
+                                src="../images/nwl_circle_green.png"
                               /></a>
                             </td>
                             <td width="30"></td>
@@ -86,7 +86,7 @@ function handleSubmit(event) {
                           <tr>
                             <td height="1px;"></td>
                             <td></td>
-                            <td><hr style="border: 0.9px solid #84ab79; margin: 7px;" /></td>
+                            <td><hr style="border: 0.5px solid #84ab79; margin-top: 7px;" /></td>
                           </tr>
                           <tr>
                             <td style="text-align: center">
