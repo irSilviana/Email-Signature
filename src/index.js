@@ -7,23 +7,14 @@ function capitalizeFirstLetter(words) {
   return separateWord.join(" ");
 }
 
-function handleSubmit(event) {
-  event.preventDefault();
-
-  let firstName = capitalizeFirstLetter(
-    document.querySelector("#firstName-input").value
-  );
+function handleSubmit(firstName, jobTitle, emailAddress) {
   let lastName = capitalizeFirstLetter(
     document.querySelector("#lastName-input").value
   );
-  let jobTitle = document.querySelector("#jobTitle-input").value;
   let customField = document.querySelector("#customField-input").value;
   let department = document.querySelector("#department-input").value;
   let officePhone = document.querySelector("#officePhone-input").value;
   let mobilePhone = document.querySelector("#mobilePhone-input").value;
-  let emailAddress = document.querySelector("#emailAddress-input").value;
-
-  let signatureOutput = document.querySelector("#signatureHtml");
 
   function checkDepartment() {
     if (department !== "") {
@@ -33,19 +24,19 @@ function handleSubmit(event) {
   checkDepartment();
 
   let phoneIcon = `<span
-                    style="
-                      display: block;
-                      background-color: #84ac7a;
-                    "
-                    ><img
-                      style="
-                        display: block;
-                        background-color: #84ac7a;
-                      "
-                      src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
-                      alt=""
-                      width="13"
-                  /></span>`;
+      style="
+        display: block;
+        background-color: #84ac7a;
+      "
+      ><img
+        style="
+          display: block;
+          background-color: #84ac7a;
+        "
+        src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
+        alt=""
+        width="13"
+    /></span>`;
 
   function showPhoneIcon() {
     if (officePhone !== "" || mobilePhone !== "") {
@@ -57,7 +48,6 @@ function handleSubmit(event) {
   showPhoneIcon();
 
   let phoneNumber = "";
-
   let officePh = ` <a
                     style="
                     font-size: medium;font-family: Arial;
@@ -88,18 +78,18 @@ function handleSubmit(event) {
       return phoneNumber;
     }
   }
-
   checkPhoneNumber();
 
+  // update visibility
   let card = document.querySelector("#card");
   let copySignature = document.querySelector("#copySignature");
-
   card.setAttribute("class", "visible");
   copySignature.setAttribute("class", "visible");
 
   let signature = document.querySelector("#signatureGenerated");
 
-  signature.innerHTML = `<table style="min-width:500px; vertical-align: -webkit-baseline-middle; font-size: medium;font-family: Arial;" cellspacing="0" cellpadding="0">
+  // generate the resulted signature
+  signature.innerHTML = `<table style="min-width:500px; vertical-align:-webkit-baseline-middle; font-size: medium;font-family: Arial;" cellspacing="0" cellpadding="0">
     <tbody>
       <tr style="height: 130px">
         <td style="height: 130px"><a href="https://naturalwayofliving.com/" target="_blank">
@@ -317,10 +307,10 @@ function handleSubmit(event) {
   </table>
   `;
 
+  // write the generated signature into the signatureOutput box
+  let signatureOutput = document.querySelector("#signatureHtml");
   signatureOutput.innerHTML = signature.innerHTML;
 }
-
-document.querySelector("#submit").addEventListener("click", handleSubmit);
 
 function copy() {
   let copyText = document.querySelector("#signatureHtml");
@@ -332,3 +322,22 @@ function copy() {
 }
 
 document.querySelector("#copyToClipboard").addEventListener("click", copy);
+
+// check the required field
+function required(event) {
+  event.preventDefault();
+
+  let firstName = capitalizeFirstLetter(
+    document.querySelector("#firstName-input").value
+  );
+  let jobTitle = document.querySelector("#jobTitle-input").value;
+  let emailAddress = document.querySelector("#emailAddress-input").value;
+
+  if (firstName === "" || jobTitle === "" || emailAddress === "") {
+    alert("Please fill in all the required fields ☺🙏🏼");
+  } else {
+    handleSubmit(firstName, jobTitle, emailAddress);
+  }
+}
+
+document.querySelector("#submit").addEventListener("click", required);
