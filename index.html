@@ -31,7 +31,7 @@
         <div class="row">
           <!-- Left Column -->
           <div class="col">
-            <div class="card">
+            <div class="card border-0">
               <div class="card-body">
                 <form class="signature">
                   <div class="row mb-1">
@@ -168,26 +168,27 @@
           </div>
 
           <!--Text Area -->
-          <div class="row">
-            <div class="col-6"></div>
-            <div class="col-6">
-              <div class="card">
+          <div class="row mb-5">
+            <div class="col-7">
+              <div class="card border-0">
                 <div class="card-body">
-                  <textarea
-                    name="signatureOutput"
-                    id="signatureHtml"
-                    cols="60"
-                    rows="9"
-                  ></textarea>
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button
-                      type="submit"
-                      class="btn btn-success"
-                      id="copyToClipboard"
-                      ;
-                    >
-                      Copy Signature
-                    </button>
+                  <div id="copySignature">
+                    <textarea
+                      name="signatureOutput"
+                      id="signatureHtml"
+                      cols="70"
+                      rows="9"
+                    ></textarea>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button
+                        type="submit"
+                        class="btn btn-success"
+                        id="copyToClipboard"
+                        ;
+                      >
+                        Copy Code
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
