@@ -29,7 +29,7 @@ function handleSubmit(event) {
                               <img
                                 style="max-width: 130px; text-align: center"
                                 role="presentation"
-                                src="../images/nwl_circle_green.png"
+                                src="https://silly-clarke-ebd9cd.netlify.app/images/nwl_circle_green.png"
                               /></a>
                             </td>
                             <td width="30"></td>
