@@ -13,248 +13,254 @@ function handleSubmit(event) {
 
   let signature = document.querySelector("#signatureGenerated");
 
-  signature.innerHTML = `<table
-                        style="
-                          vertical-align: -webkit-baseline-middle;
-                          font-size: medium;
-                          font-family: Arial;
-                        "
-                        cellspacing="0"
-                        cellpadding="0"
-                      >
-                        <tbody>
-                          <tr>
-                            <td>
-                            <a href="https://naturalwayofliving.com" target="_blank">
-                              <img
-                                style="max-width: 130px; text-align: center; margin-top:15px"
-                                role="presentation"
-                                src="https://nwl-signature.netlify.app/images/nwl_circle_green.png"
-                              /></a>
-                            </td>
-                            <td width="30"></td>
-                            <td>
-                              <h3
-                                style="font-weight:700;  font-size: 18px; color: #000000; text-transform: capitalize;  line-height: 22px;
-                                margin-top: -20px 0 0;"
-                              >
-                                ${firstName} ${lastName}
-                              </h3>
-                              <p
-                                style="
-                                  margin: 0px;
-                                  color: #000000;
-                                  font-size: 14px;
-                                  line-height: 22px;
-                                   text-transform: capitalize;
-                                "
-                              >
-                                ${jobTitle}
-                              </p>
-                              <p
-                                style="
-                                  color: #000000;
-                                  margin: 0px;
-                                  font-size: 14px;
-                                  line-height: 22px;
-                                   text-transform: capitalize;
-                                "
-                              >
-                                ${customField}
-                              </p>
-                              <p
-                                style="
-                                  margin: 0px;
-                                  font-weight: 500;
-                                  color: #000000;
-                                  font-size: 14px;
-                                  line-height: 22px;
-                                   text-transform: capitalize;
-                                "
-                              >
-                                <b
-                                  >${department}&nbsp|&nbspNatural Way Of
-                                  Living</b
-                                >
-                              </p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td height="1px;"></td>
-                            <td></td>
-                            <td colspan="1" rowspan="1" style="width:100%; border-bottom:1px solid #84ac7a; 
-                            border-left:none; display:block; margin-top:-50px">&nbsp;</td>
-                          </tr>
-                          <tr>
-                            <td style="text-align: center">
-                              <a
-                                class="social-media"
-                                style="
-                                  display: inline-block;
-                                  padding: 0px;
-                                  background-color: #8fadc9;
-                                "
-                                href="https://www.facebook.com/nwlcommunity/" target="_blank"
-                                ><img
-                                  class="social-media"
-                                  style="
-                                    background-color: #8fadc9;
-                                    max-width: 135px;
-                                    display: block;
-                                  "
-                                  src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/facebook-icon-2x.png"
-                                  alt="facebook"
-                                  height="24"
-                              /></a>
-                              <a
-                                class="social-media"
-                                style="
-                                  display: inline-block;
-                                  padding: 0px;
-                                  background-color: #8fadc9;
-                                "
-                                href="https://www.linkedin.com/company/naturalwayofliving/" target="_blank"
-                                ><img
-                                  class="social-media"
-                                  style="
-                                    background-color: #8fadc9;
-                                    max-width: 135px;
-                                    display: block;
-                                  "
-                                  src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/linkedin-icon-2x.png"
-                                  alt="linkedin"
-                                  height="24"
-                              /></a>
-                              <a
-                                class="social-media"
-                                style="
-                                  display: inline-block;
-                                  padding: 0px;
-                                  background-color: #8fadc9;
-                                "
-                                href="https://www.instagram.com/naturalwayofliving/" target="_blank"
-                                ><img
-                                  class="social-media"
-                                  style="
-                                    background-color: #8fadc9;
-                                    max-width: 135px;
-                                    display: block;
-                                  "
-                                  src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/instagram-icon-2x.png"
-                                  alt="instagram"
-                                  height="24" /></a
-                              ><a
-                                class="social-media"
-                                style="
-                                  display: inline-block;
-                                  padding: 0px;
-                                  background-color: #8fadc9;
-                                "
-                                href="https://www.youtube.com/NaturalWayofLiving" target="_blank"
-                                ><img
-                                  class="social-media"
-                                  style="
-                                    background-color: #ffffff;
-                                    max-width: 135px;
-                                    display: block;
-                                    padding-left: 5px;
-                                  "
-                                  src="https://www.dropbox.com/s/x96dpne8n1v91zw/biggeryoutube.png?raw=1"
-                                  alt="youtube"
-                                  height="24"
-                              /></a>
-                            </td>
-                            <td></td>
-                            <td>
-                              <p style="margin-top: -20px; padding: 0">
-                                <span
-                                  style="
-                                    display: inline-block;
-                                    background-color: #84ac7a;
-                                  "
-                                  ><img
-                                    style="
-                                      display: block;
-                                      background-color: #84ac7a;
-                                    "
-                                    src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
-                                    width="13"
-                                /></span>
-                                <a
-                                  style="
-                                    text-decoration: none;
-                                    color: #000000;
-                                    font-size: 12px;
-                                    padding-left: 5px;
-                                  "
-                                  href="tel:${officePhone}"
-                                  >${officePhone}</a
-                                >
-                                |
-                                <a
-                                  style="
-                                    text-decoration: none;
-                                    color: #000000;
-                                    font-size: 12px;
-                                  "
-                                  href="tel:${mobilePhone}"
-                                  >${mobilePhone}</a
-                                >
-                              </p>
-                              <p style="margin-top: -20px; padding: 0">
-                                <span
-                                  style="
-                                    display: inline-block;
-                                    background-color: #84ac7a;
-                                  "
-                                  ><img
-                                    style="
-                                      display: block;
-                                      background-color: #84ac7a;
-                                    "
-                                    src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/email-icon-2x.png"
-                                    width="13" /></span
-                                ><a
-                                  style="
-                                    text-decoration: none;
-                                    color: #000000;
-                                    font-size: 12px;
-                                    padding-left: 10px;
-                                  "
-                                  href="mailto:${emailAddress}@naturalwayofliving.com"
-                                  >${emailAddress}@naturalwayofliving.com</a
-                                >
-                              </p>
-                              <p style="margin-top: -20px; padding: 0">
-                                <span
-                                  style="
-                                    display: inline-block;
-                                    background-color: #84ac7a;
-                                  "
-                                  ><img
-                                    style="
-                                      display: block;
-                                      background-color: #84ac7a;
-                                    "
-                                    src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png"
-                                    width="13"
-                                /></span>
-                                <a
-                                  style="
-                                    text-decoration: none;
-                                    text-transform: none;
-                                    color: #000000;
-                                    font-size: 12px;
-                                    padding-left: 5px;
-                                  "
-                                  href="//www.naturalwayofliving.com" target="_blank"
-                                  >www.naturalwayofliving.com</a
-                                >
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>`;
+  signature.innerHTML = `
+  <table style="min-width:500px; vertical-align: -webkit-baseline-middle; font-size: medium;font-family: Arial;" cellspacing="0" cellpadding="0">
+    <tbody>
+      <tr style="height: 130px">
+        <td style="height: 130px"><a href="https://naturalwayofliving.com/" target="_blank">
+          <img
+            style="
+              max-width: 130px;
+              display: block;
+              margin: 0 auto;
+            "
+            src="https://www.dropbox.com/s/85wgqa4fjo2a8m3/nwl_circle_green.png?raw=1"
+            alt=""
+            width="130"
+          /></a>
+        </td>
+        <td style="height: 130px; width: 25px">&nbsp;</td>
+        <td
+          style="
+            height: 110px;
+            width: 100%;
+            border-bottom: 1px solid #84ac7a;
+            border-left: none;
+            display: block;
+          "
+        >
+          <h3
+            style="
+              margin: 0px;
+              font-size: 18px;
+              color: #000000; text-transform: capitalize;
+            "
+          >
+            ${firstName} ${lastName}
+          </h3>
+          <p
+            style="
+              margin: 0px;
+              color: #000000;
+              font-size: 14px;
+              line-height: 22px; text-transform: capitalize;
+            "
+          >
+            ${jobTitle}
+          </p>
+          <p
+            style="
+              color: #000000;
+              margin: 0px;
+              font-size: 14px;
+              line-height: 22px; text-transform: capitalize;
+            "
+          >
+            ${customField}
+          </p>
+          <p
+            style="
+              margin: 0px;
+              font-weight: 500;
+              color: #000000;
+              font-size: 14px;
+              line-height: 22px; text-transform: capitalize;
+            "
+          >
+            <strong
+              >${department} | Natural Way Of Living</strong
+            >
+          </p>
+        </td>
+      </tr>
+      <tr style="height: 22px">
+        <td style="height: 22px; text-align: center">
+          <a
+            style="
+              display: inline-block;
+              padding: 0px;
+              background-color: #8fadc9;
+            "
+            href="https://www.facebook.com/nwlcommunity/" target="_blank"
+            ><img
+              style="
+                background-color: #8fadc9;
+                max-width: 135px;
+                display: block;
+              "
+              src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/facebook-icon-2x.png"
+              alt="facebook"
+              height="24" /></a
+          >&nbsp;<a
+            style="
+              display: inline-block;
+              padding: 0px;
+              background-color: #8fadc9;
+            "
+            href="https://www.linkedin.com/company/naturalwayofliving/" target="_blank"
+            ><img
+              style="
+                background-color: #8fadc9;
+                max-width: 135px;
+                display: block;
+              "
+              src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/linkedin-icon-2x.png"
+              alt="linkedin"
+              height="24" /></a
+          >&nbsp;<a
+            style="
+              display: inline-block;
+              padding: 0px;
+              background-color: #8fadc9;
+            "
+            href="https://www.instagram.com/naturalwayofliving/" target="_blank"
+            ><img
+              style="
+                background-color: #8fadc9;
+                max-width: 135px;
+                display: block;
+              "
+              src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/instagram-icon-2x.png"
+              alt="instagram"
+              height="24" /></a
+          >&nbsp;<a
+            style="
+              display: inline-block;
+              padding: 0px;
+              background-color: #8fadc9;
+            "
+            href="https://www.youtube.com/NaturalWayofLiving" target="_blank"
+            ><img
+              style="
+                background-color: white;
+                max-width: 135px;
+                display: block;
+              "
+              src="https://www.dropbox.com/s/x96dpne8n1v91zw/biggeryoutube.png?raw=1"
+              alt="youtube"
+              height="24"
+          /></a>
+        </td>
+        <td style="height: 22px">&nbsp;</td>
+        <td style="height: 22px">
+          <table style="vertical-align: -webkit-baseline-middle; font-size: medium;font-family: Arial;" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td>
+                  <span
+                    style="
+                      display: block;
+                      background-color: #84ac7a;
+                    "
+                    ><img
+                      style="
+                        display: block;
+                        background-color: #84ac7a;
+                      "
+                      src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
+                      alt=""
+                      width="13"
+                  /></span>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                  <a
+                    style="
+                      text-decoration: none;
+                      color: #000000;
+                      font-size: 12px;
+                    "
+                    href="tel:${officePhone}"
+                    >${officePhone}</a
+                  >
+                  |
+                  <a
+                    style="
+                      text-decoration: none;
+                      color: #000000;
+                      font-size: 12px;
+                    "
+                    href="tel:${mobilePhone}"
+                    >${mobilePhone}</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span
+                    style="
+                      display: block;
+                      background-color: #84ac7a;
+                    "
+                    ><img
+                      style="
+                        display: block;
+                        background-color: #84ac7a;
+                      "
+                      src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/email-icon-2x.png"
+                      alt=""
+                      width="13"
+                  /></span>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                  <a
+                    style="
+                      text-decoration: none;
+                      color: #000000;
+                      font-size: 12px;
+                    "
+                    href="mailto:${emailAddress}@naturalwayofliving.com"
+                    >${emailAddress}@naturalwayofliving.com</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span
+                    style="
+                      display: block;
+                      background-color: #84ac7a;
+                    "
+                    ><img
+                      style="
+                        display: block;
+                        background-color: #84ac7a;
+                      "
+                      src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png"
+                      alt=""
+                      width="13"
+                  /></span>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                  <a
+                    style="
+                      text-decoration: none;
+                      color: #000000;
+                      font-size: 12px;
+                    "
+                    href="//www.naturalwayofliving.com" target="_blank"
+                    >www.naturalwayofliving.com</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>`;
 
   signatureOutput.innerHTML = signature.innerHTML;
 }
