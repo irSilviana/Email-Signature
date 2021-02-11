@@ -160,23 +160,127 @@
                 <div class="row">
                   <!--left column -->
                   <div class="col">
-                    <textarea
-                      name="signatureOutput"
-                      id="signatureGenerated"
-                      cols="60"
-                      rows="9"
-                    ></textarea>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <a
+                              href="https://naturalwayofliving.com/"
+                              target="_blank"
+                            >
+                              <img
+                                src="/images/nwl_circle_green.png"
+                                alt="Natural Way of Living Logo"
+                                class="logo"
+                              />
+                            </a>
+                            <div class="social-media">
+                              <a
+                                href="https://www.facebook.com/nwlcommunity/"
+                                target="_blank"
+                                ><img
+                                  src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/facebook-icon-2x.png"
+                                  alt="facebook"
+                              /></a>
+                              <a
+                                href="https://www.linkedin.com/company/naturalwayofliving/"
+                                target="_blank"
+                                ><img
+                                  src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/linkedin-icon-2x.png"
+                                  alt="linkedin"
+                              /></a>
+                              <a
+                                href="https://www.instagram.com/naturalwayofliving/"
+                                target="_blank"
+                                ><img
+                                  src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/instagram-icon-2x.png"
+                                  alt="instagram"
+                              /></a>
+                              <a
+                                href="https://www.youtube.com/naturalwayofliving"
+                                target="_blank"
+                                ><img
+                                  class="youtube"
+                                  src="https://www.dropbox.com/s/x96dpne8n1v91zw/biggeryoutube.png?raw=1"
+                                  alt="youtube"
+                                  height="24"
+                              /></a>
+                            </div>
+                          </td>
 
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                      <button
-                        type="submit"
-                        class="btn btn-success"
-                        id="copyToClipboard"
-                        ;
-                      >
-                        Copy Signature
-                      </button>
-                    </div>
+                          <!-- right column -->
+                          <td>
+                            <h3>${firstName} ${lastName}</h3>
+                            <ul>
+                              <li id="jobTitle">${jobTitle}</li>
+                              <li id="customField">${customField}</li>
+                            </ul>
+                            <h2>
+                              <span id="department">${department}</span> |
+                              Natural Way of Living
+                            </h2>
+                            <hr />
+                            <div class="contact">
+                              <ul>
+                                <li>
+                                  <i class="fas fa-phone-alt contact-icon"></i
+                                  ><a href="tel:${officePhone}" id="officePhone"
+                                    >${officePhone}</a
+                                  >
+                                  |
+                                  <a href="tel:${mobilePhone}" id="mobilePhone"
+                                    >${mobilePhone}</a
+                                  >
+                                </li>
+                                <li>
+                                  <i class="fas fa-envelope contact-icon"></i
+                                  ><a
+                                    href="mailto:${emailAddress}@naturalwayofliving.com"
+                                    id="emailAddress"
+                                    >${emailAddress}@naturalwayofliving.com</a
+                                  >
+                                </li>
+                                <li>
+                                  <i class="fas fa-link contact-icon"></i
+                                  ><a
+                                    href="https://naturalwayofliving.com"
+                                    target="_blank"
+                                    >www.naturalwayofliving.com</a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Text Area -->
+          <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6">
+              <div class="card">
+                <div class="card-body">
+                  <textarea
+                    name="signatureOutput"
+                    id="signatureGenerated"
+                    cols="60"
+                    rows="9"
+                  ></textarea>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button
+                      type="submit"
+                      class="btn btn-success"
+                      id="copyToClipboard"
+                      ;
+                    >
+                      Copy Signature
+                    </button>
                   </div>
                 </div>
               </div>

@@ -82,8 +82,19 @@ table td {
   margin-bottom: 20px;
 }
 
-.social-media {
-  margin-left: 20px;
+.social-media a img {
+  margin-left: 5px;
+  background-color: #8fadc9;
+  max-width: 135px;
+  display: inline;
+  height: 24px;
+}
+
+img.youtube {
+  background-color: white;
+  max-width: 135px;
+  display: inline;
+  border-radius: 30px;
 }
 .social-media a {
   color: #8fadc9;
