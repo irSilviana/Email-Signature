@@ -27,20 +27,16 @@ function handleSubmit(event) {
                             <td>
                             <a href="https://naturalwayofliving.com" target="_blank">
                               <img
-                                style="max-width: 130px; text-align: center"
+                                style="max-width: 130px; text-align: center; margin-top:15px"
                                 role="presentation"
-                                src="https://silly-clarke-ebd9cd.netlify.app/images/nwl_circle_green.png"
+                                src="https://nwl-signature.netlify.app/images/nwl_circle_green.png"
                               /></a>
                             </td>
                             <td width="30"></td>
                             <td>
                               <h3
-                                style="
-                                  margin: 0px;
-                                  font-size: 18px;
-                                  color: #000000;
-                                   text-transform: capitalize;
-                                "
+                                style="font-weight:700;  font-size: 18px; color: #000000; text-transform: capitalize;  line-height: 22px;
+                                margin-top: -20px 0 0;"
                               >
                                 ${firstName} ${lastName}
                               </h3>
@@ -86,7 +82,8 @@ function handleSubmit(event) {
                           <tr>
                             <td height="1px;"></td>
                             <td></td>
-                            <td><hr style="border: 0.5px solid #84ab79; margin-top: 7px;" /></td>
+                            <td colspan="1" rowspan="1" style="width:100%; border-bottom:1px solid #84ac7a; 
+                            border-left:none; display:block; margin-top:-50px">&nbsp;</td>
                           </tr>
                           <tr>
                             <td style="text-align: center">
@@ -169,7 +166,7 @@ function handleSubmit(event) {
                             </td>
                             <td></td>
                             <td>
-                              <p style="margin: 0; padding: 0">
+                              <p style="margin-top: -20px; padding: 0">
                                 <span
                                   style="
                                     display: inline-block;
@@ -204,7 +201,7 @@ function handleSubmit(event) {
                                   >${mobilePhone}</a
                                 >
                               </p>
-                              <p style="margin: 0; padding: 0">
+                              <p style="margin-top: -20px; padding: 0">
                                 <span
                                   style="
                                     display: inline-block;
@@ -228,7 +225,7 @@ function handleSubmit(event) {
                                   >${emailAddress}@naturalwayofliving.com</a
                                 >
                               </p>
-                              <p style="margin: 0; padding: 0">
+                              <p style="margin-top: -20px; padding: 0">
                                 <span
                                   style="
                                     display: inline-block;
