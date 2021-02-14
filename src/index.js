@@ -83,8 +83,11 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
   // update visibility
   let card = document.querySelector("#card");
   let copySignature = document.querySelector("#copySignature");
+  let copySignature2 = document.querySelector("#copySignature2");
+
   card.setAttribute("class", "visible");
   copySignature.setAttribute("class", "visible");
+  copySignature2.setAttribute("class", "visible");
 
   let signature = document.querySelector("#signatureGenerated");
 
@@ -318,10 +321,47 @@ function copy() {
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   document.execCommand("copy");
+  copyToClipboard.innerHTML = "Code copied";
   alert("Signature copied!");
 }
+let copyToClipboard = document
+  .querySelector("#copyToClipboard")
+  .addEventListener("click", copy);
 
-document.querySelector("#copyToClipboard").addEventListener("click", copy);
+// Copy the signature into the clipboard
+document.addEventListener("DOMContentLoaded", function () {
+  // Query the elements
+  let copyButton = document.querySelector("#copyToClipboard2");
+  let codeEle = document.querySelector("#signatureGenerated");
+
+  copyButton.addEventListener("click", function () {
+    let selection = window.getSelection();
+
+    // Save the current selection
+    let currentRange =
+      selection.rangeCount === 0 ? null : selection.getRangeAt(0);
+
+    // Select the text content of code element
+    let range = document.createRange();
+    range.selectNodeContents(codeEle);
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    // Copy to the clipboard
+    try {
+      document.execCommand("copy");
+      copyButton.innerHTML = "Signature Copied";
+      alert("Paste (Ctr+V) into the signature box in your Zimbra");
+    } catch (err) {
+      // Unable to copy
+      copyButton.innerHTML = "Try again, Copy";
+    } finally {
+      // Restore the previous selection
+      selection.removeAllRanges();
+      currentRange && selection.addRange(currentRange);
+    }
+  });
+});
 
 // check the required field
 function required(event) {
@@ -339,5 +379,4 @@ function required(event) {
     handleSubmit(firstName, jobTitle, emailAddress);
   }
 }
-
 document.querySelector("#submit").addEventListener("click", required);

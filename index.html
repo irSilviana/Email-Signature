@@ -39,7 +39,7 @@
             <div class="card border-0">
               <div class="card-body">
                 <form class="signature">
-                  <div class="row mb-1">
+                  <div class="row mb-2">
                     <label for="firstName" class="col-sm col-form-label"
                       >First Name<sup class="required">*(required)</sup></label
                     >
@@ -166,11 +166,26 @@
           <!-- Right Column -->
           <div class="col">
             <div class="card invisible" id="card">
-              <div class="card-body">
+              <div class="card-body border rounded">
                 <div class="row">
                   <!--left column -->
                   <div class="col">
                     <div id="signatureGenerated"></div>
+                    <br />
+                    <div id="copySignature2" class="invisible">
+                      <div
+                        class="d-grid gap-2 d-md-flex justify-content-md-end"
+                      >
+                        <button
+                          type="submit"
+                          class="btn btn-success"
+                          id="copyToClipboard2"
+                          ;
+                        >
+                          Copy Signature
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
