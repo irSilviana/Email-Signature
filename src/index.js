@@ -317,6 +317,7 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
 
 function copy() {
   let copyText = document.querySelector("#signatureHtml");
+  let button = document.querySelector("#copyToClipboard");
 
   copyText.select();
   copyText.setSelectionRange(0, 99999);
@@ -324,6 +325,7 @@ function copy() {
   alert(
     `Code Copied! 🖱 Paste (Ctr+V) this code into the signature box in your Thunderbird`
   );
+  button.innerHTML = "Code copied!";
 }
 let copyToClipboard = document
   .querySelector("#copyToClipboard")
@@ -351,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Copy to the clipboard
     try {
       document.execCommand("copy");
-      copyButton.innerHTML = "Signature Copied";
+      copyButton.innerHTML = "Signature copied!";
       alert(
         "Signature Copied! 🖱 Paste (Ctr+V) it into the signature box in your Zimbra"
       );
