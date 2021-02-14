@@ -321,14 +321,13 @@ function copy() {
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  copyToClipboard.innerHTML = "Code copied";
   alert("Signature copied!");
 }
 let copyToClipboard = document
   .querySelector("#copyToClipboard")
   .addEventListener("click", copy);
 
-// Copy the signature into the clipboard
+// Function to Copy the signature into the clipboard
 document.addEventListener("DOMContentLoaded", function () {
   // Query the elements
   let copyButton = document.querySelector("#copyToClipboard2");
