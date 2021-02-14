@@ -321,7 +321,9 @@ function copy() {
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  alert("Signature copied!");
+  alert(
+    `Code Copied! 🖱 Paste (Ctr+V) this code into the signature box in your Thunderbird`
+  );
 }
 let copyToClipboard = document
   .querySelector("#copyToClipboard")
@@ -350,7 +352,9 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       document.execCommand("copy");
       copyButton.innerHTML = "Signature Copied";
-      alert("Paste (Ctr+V) into the signature box in your Zimbra");
+      alert(
+        "Signature Copied! 🖱 Paste (Ctr+V) it into the signature box in your Zimbra"
+      );
     } catch (err) {
       // Unable to copy
       copyButton.innerHTML = "Try again, Copy";
