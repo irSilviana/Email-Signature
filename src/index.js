@@ -33,7 +33,7 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
           display: block;
           background-color: #84ac7a;
         "
-        src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png"
+        src="https://nwl-signature.netlify.app/images/phone-icon-2x.png"
         alt=""
         width="13"
     /></span>`;
@@ -173,7 +173,7 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
                 max-width: 135px;
                 display: block;
               "
-              src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/facebook-icon-2x.png"
+              src="https://nwl-signature.netlify.app/images/facebook-icon-2x.png"
               alt="facebook"
               height="24" /></a
           >&nbsp;<a
@@ -189,7 +189,7 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
                 max-width: 135px;
                 display: block;
               "
-              src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/linkedin-icon-2x.png"
+              src="https://nwl-signature.netlify.app/images/linkedin-icon-2x.png"
               alt="linkedin"
               height="24" /></a
           >&nbsp;<a
@@ -205,7 +205,7 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
                 max-width: 135px;
                 display: block;
               "
-              src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/instagram-icon-2x.png"
+              src="https://nwl-signature.netlify.app/images/instagram-icon-2x.png"
               alt="instagram"
               height="24" /></a
           >&nbsp;<a
@@ -221,7 +221,7 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
                 max-width: 135px;
                 display: block;
               "
-              src="https://www.dropbox.com/s/x96dpne8n1v91zw/biggeryoutube.png?raw=1"
+              src="https://nwl-signature.netlify.app/images/biggeryoutube.png"
               alt="youtube"
               height="24"
           /></a>
@@ -251,7 +251,7 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
                         display: block;
                         background-color: #84ac7a;
                       "
-                      src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/email-icon-2x.png"
+                      src="https://nwl-signature.netlify.app/images/email-icon-2x.png"
                       alt=""
                       width="13"
                   /></span>
@@ -281,7 +281,7 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
                         display: block;
                         background-color: #84ac7a;
                       "
-                      src="https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png"
+                      src="https://nwl-signature.netlify.app/images/link-icon-2x.png"
                       alt=""
                       width="13"
                   /></span>
