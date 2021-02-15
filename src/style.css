@@ -126,3 +126,12 @@ a.social-media {
 .required {
   color: red;
 }
+
+.instruction {
+  line-height: 1;
+  padding: 10px;
+  font-size: 17px;
+  color: #5a5757;
+  font-weight: bold;
+  background: #f0f0f5;
+}
