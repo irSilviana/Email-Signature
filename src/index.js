@@ -550,7 +550,7 @@ function setEnglish(event) {
   let x = document.querySelectorAll("span.instruction");
   let i;
   for (i = 0; i < x.length; i++) {
-    x[i].innerHTML = "Please simply click this button --->";
+    x[i].innerHTML = "Click this button --->";
   }
 }
 
