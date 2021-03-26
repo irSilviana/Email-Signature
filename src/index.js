@@ -433,12 +433,12 @@ function setBahasa(event) {
 
   document.querySelector(
     '[for="firstName"]'
-  ).innerHTML = `<label for="firstName" class="col-sm col-form-label">Nama Depan<sup class="required">*(required)</sup></label>`;
+  ).innerHTML = `<label for="firstName" class="col-sm col-form-label">Nama Depan<sup class="required">*(wajib)</sup></label>`;
   document.querySelector('[for="lastName"]').innerHTML = "Nama Belakang";
   document.querySelector(
     '[for="jobTitle"]'
   ).innerHTML = `<label for="jobTitle" class="col-sm col-form-label"
-                      >Jenis Pekerjaan<sup class="required">*(required)</sup></label
+                      >Jenis Pekerjaan<sup class="required">*(wajib)</sup></label
                     >`;
   document.querySelector('[for="customField"]').innerHTML = "Keterangan";
   document.querySelector('[for="department"]').innerHTML = "Departemen";
@@ -458,6 +458,13 @@ function setBahasa(event) {
                         <em>(sertakan kode negara)</em>
                       </sub></label
                     >`;
+
+  document.querySelector(
+    '[for="emailAddress"]'
+  ).innerHTML = `<label for="emailAddress" class="col-sm col-form-label"
+                      >Email<sup class="required">*(wajib)</sup>
+                      <address></address
+                    ></label>`;
 
   let x = document.querySelectorAll("span.instruction");
   let i;
