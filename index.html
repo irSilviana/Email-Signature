@@ -32,41 +32,47 @@
           class="main-logo"
         />
         <h1>NWL Email Signature Generator</h1>
-        <p class="right-menu">
-          <a
-            href="https://exchange.naturalwayofliving.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Login to Zimbra</a
-          >&nbsp;|&nbsp;
-          <a
-            href="./files/Tutorial to setup new Email ver 5.5.pdf"
-            target="_blank"
-            >Tutorial</a
-          >&nbsp;|&nbsp;
-          <a
-            href="https://youtu.be/H4zSvt6z-so"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Video Tutorial
-          </a>
-          &nbsp;|&nbsp;
-          <!-- Calendly link widget begin -->
-          <link
-            href="https://assets.calendly.com/assets/external/widget.css"
-            rel="stylesheet"
-          />
-          <script
-            src="https://assets.calendly.com/assets/external/widget.js"
-            type="text/javascript"
-          ></script>
-          <a
-            href=""
-            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/irfani-silviana/nwl-email-support'});return false;"
-            >Schedule time for live support</a
-          >
-          <!-- Calendly link widget end -->
-        </p>
+        <div class="right-menu">
+          <div id="language">
+            <a href="/" id="bahasaIndonesia">Bahasa Indonesia</a>
+            | <a href="/" id="english" class="active">English</a>
+          </div>
+          <div id="nav-bar">
+            <a
+              href="https://exchange.naturalwayofliving.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Login to Zimbra</a
+            >&nbsp;|&nbsp;
+            <a
+              href="./files/Tutorial to setup new Email ver 5.5.pdf"
+              target="_blank"
+              >Tutorial</a
+            >&nbsp;|&nbsp;
+            <a
+              href="https://youtu.be/H4zSvt6z-so"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Video Tutorial
+            </a>
+            &nbsp;|&nbsp;
+            <!-- Calendly link widget begin -->
+            <link
+              href="https://assets.calendly.com/assets/external/widget.css"
+              rel="stylesheet"
+            />
+            <script
+              src="https://assets.calendly.com/assets/external/widget.js"
+              type="text/javascript"
+            ></script>
+            <a
+              href=""
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/irfani-silviana/nwl-email-support'});return false;"
+              >Schedule time for Live Support</a
+            >
+            <!-- Calendly link widget end -->
+          </div>
+        </div>
         <hr />
         <div class="row">
           <!-- Left Column -->
@@ -263,7 +269,10 @@
             </div>
           </div>
         </div>
-        <footer>© 2021 - NWL Signature</footer>
+        <footer>
+          <span class="copyright">© 2021 - NWL Signature</span>
+          <div class="bestView">(Best view on Google Chrome Browser)</div>
+        </footer>
       </div>
     </div>
   </body>

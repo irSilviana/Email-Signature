@@ -385,3 +385,166 @@ function required(event) {
   }
 }
 document.querySelector("#submit").addEventListener("click", required);
+
+// Language Selection
+function setBahasa(event) {
+  event.preventDefault();
+
+  let bahasa = document.querySelector("#bahasaIndonesia");
+  let english = document.querySelector("#english");
+  let menu = document.querySelector("#nav-bar");
+
+  bahasa.classList.add("active");
+  english.classList.remove("active");
+
+  menu.innerHTML = ` <a
+              href="https://exchange.naturalwayofliving.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Login ke Zimbra</a
+            >&nbsp;|&nbsp;
+            <a
+              href="./files/Tutorial to setup new Email ver 5.5 - Bahasa.pdf"
+              target="_blank"
+              >Tutorial</a
+            >&nbsp;|&nbsp;
+            <a
+              href="https://youtu.be/H4zSvt6z-so"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Video Tutorial
+            </a>
+            &nbsp;|&nbsp;
+            <!-- Calendly link widget begin -->
+            <link
+              href="https://assets.calendly.com/assets/external/widget.css"
+              rel="stylesheet"
+            />
+            <script
+              src="https://assets.calendly.com/assets/external/widget.js"
+              type="text/javascript"
+            ></script>
+            <a
+              href=""
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/irfani-silviana/nwl-email-support'});return false;"
+              >Jadwalkan Live Support</a
+            >
+            <!-- Calendly link widget end -->`;
+
+  document.querySelector(
+    '[for="firstName"]'
+  ).innerHTML = `<label for="firstName" class="col-sm col-form-label">Nama Depan<sup class="required">*(required)</sup></label>`;
+  document.querySelector('[for="lastName"]').innerHTML = "Nama Belakang";
+  document.querySelector(
+    '[for="jobTitle"]'
+  ).innerHTML = `<label for="jobTitle" class="col-sm col-form-label"
+                      >Jenis Pekerjaan<sup class="required">*(required)</sup></label
+                    >`;
+  document.querySelector('[for="customField"]').innerHTML = "Keterangan";
+  document.querySelector('[for="department"]').innerHTML = "Departemen";
+
+  document.querySelector(
+    '[for="officePhone"]'
+  ).innerHTML = `<label for="officePhone" class="col-sm col-form-label"
+                      >Telepon Kantor
+                      <sub>
+                        <em>(sertakan kode negara)</em>
+                      </sub>
+                    </label>`;
+  document.querySelector(
+    '[for="mobilePhone"]'
+  ).innerHTML = `<label for="mobilePhone" class="col-sm col-form-label"
+                      >Handphone<sub>
+                        <em>(sertakan kode negara)</em>
+                      </sub></label
+                    >`;
+
+  let x = document.querySelectorAll("span.instruction");
+  let i;
+  for (i = 0; i < x.length; i++) {
+    x[i].innerHTML = "Klik tombol ini --->";
+  }
+}
+
+document.querySelector("#bahasaIndonesia").addEventListener("click", setBahasa);
+
+function setEnglish(event) {
+  event.preventDefault();
+
+  let bahasa = document.querySelector("#bahasaIndonesia");
+  let english = document.querySelector("#english");
+  let menu = document.querySelector("#nav-bar");
+
+  english.classList.add("active");
+  bahasa.classList.remove("active");
+
+  menu.innerHTML = `  <a
+              href="https://exchange.naturalwayofliving.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Login to Zimbra</a
+            >&nbsp;|&nbsp;
+            <a
+              href="./files/Tutorial to setup new Email ver 5.5.pdf"
+              target="_blank"
+              >Tutorial</a
+            >&nbsp;|&nbsp;
+            <a
+              href="https://youtu.be/H4zSvt6z-so"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Video Tutorial
+            </a>
+            &nbsp;|&nbsp;
+            <!-- Calendly link widget begin -->
+            <link
+              href="https://assets.calendly.com/assets/external/widget.css"
+              rel="stylesheet"
+            />
+            <script
+              src="https://assets.calendly.com/assets/external/widget.js"
+              type="text/javascript"
+            ></script>
+            <a
+              href=""
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/irfani-silviana/nwl-email-support'});return false;"
+              >Schedule time for Live Support</a
+            >
+            <!-- Calendly link widget end -->`;
+
+  document.querySelector(
+    '[for="firstName"]'
+  ).innerHTML = `<label for="firstName" class="col-sm col-form-label">First Name<sup class="required">*(required)</sup></label>`;
+  document.querySelector('[for="lastName"]').innerHTML = "Last Name";
+  document.querySelector(
+    '[for="jobTitle"]'
+  ).innerHTML = `<label for="jobTitle" class="col-sm col-form-label"
+                      >Job Title<sup class="required">*(required)</sup></label
+                    >`;
+  document.querySelector('[for="customField"]').innerHTML = "Custom Field";
+  document.querySelector('[for="department"]').innerHTML = "Departement";
+
+  document.querySelector(
+    '[for="officePhone"]'
+  ).innerHTML = `<label for="officePhone" class="col-sm col-form-label"
+                      >Office Phone
+                      <sub>
+                        <em>(include the country code)</em>
+                      </sub>
+                    </label>`;
+  document.querySelector(
+    '[for="mobilePhone"]'
+  ).innerHTML = `<label for="mobilePhone" class="col-sm col-form-label"
+                      >Mobile Phone<sub>
+                        <em>(include the country code)</em>
+                      </sub></label
+                    >`;
+
+  let x = document.querySelectorAll("span.instruction");
+  let i;
+  for (i = 0; i < x.length; i++) {
+    x[i].innerHTML = "Please simply click this button --->";
+  }
+}
+
+document.querySelector("#english").addEventListener("click", setEnglish);

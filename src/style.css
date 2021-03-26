@@ -54,9 +54,37 @@ footer {
   padding-bottom: 20px;
 }
 
-p.right-menu {
+.right-menu {
+  text-align: right;
+  line-height: 35px;
+}
+.right-menu a {
+  text-decoration: none;
+}
+.right-menu a:hover {
+  text-decoration: overline;
+  font-weight: 900;
+}
+#language {
+  text-align: right;
+  font-size: 14px;
+}
+
+#language .active {
+  color: #5a5757;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: default;
+}
+
+#language .active:hover {
+  text-decoration: none;
+}
+
+#nav-bar {
   text-align: right;
 }
+
 .app-wrapper {
   margin-top: 30px;
 }
@@ -137,4 +165,13 @@ a.social-media {
   color: #5a5757;
   font-weight: bold;
   background: #f0f0f5;
+}
+
+.copyright {
+  text-align: left;
+}
+
+.bestView {
+  font-size: 12px;
+  text-align: center;
 }
