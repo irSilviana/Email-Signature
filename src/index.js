@@ -387,6 +387,7 @@ function required(event) {
 document.querySelector("#submit").addEventListener("click", required);
 
 // Language Selection
+//set to Bahasa Indonesia
 function setBahasa(event) {
   event.preventDefault();
 
@@ -409,7 +410,7 @@ function setBahasa(event) {
               >Tutorial</a
             >&nbsp;|&nbsp;
             <a
-              href="https://youtu.be/H4zSvt6z-so"
+              href="https://youtu.be/lbY43AIWxOw"
               target="_blank"
               rel="noopener noreferrer"
               >Video Tutorial
@@ -473,6 +474,7 @@ function setBahasa(event) {
 
 document.querySelector("#bahasaIndonesia").addEventListener("click", setBahasa);
 
+//set to English
 function setEnglish(event) {
   event.preventDefault();
 
