@@ -26,12 +26,12 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
   let phoneIcon = `<span
       style="
         display: block;
-        background-color: #84ac7a;
+        background-color: #ffffff;
       "
       ><img
         style="
           display: block;
-          background-color: #84ac7a;
+          background-color: #84ab79;
         "
         src="https://nwl-signature.netlify.app/images/phone-icon-2x.png"
         alt=""
@@ -167,64 +167,64 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
             style="
               display: inline-block;
               padding: 0px;
-              background-color: #8fadc9;
+              background-color: #ffffff;
             "
             href="https://www.facebook.com/nwlcommunity/" target="_blank"
             ><img
               style="
-                background-color: #8fadc9;
-                max-width: 135px;
+                background-color: #ffffff;
+                max-width: 24px;
                 display: block;
               "
-              src="https://nwl-signature.netlify.app/images/facebook-icon-2x.png"
+              src="https://nwl-signature.netlify.app/images/facebook.png"
               alt="facebook"
               height="24" /></a
           >&nbsp;<a
             style="
               display: inline-block;
               padding: 0px;
-              background-color: #8fadc9;
+             background-color:#ffffff;
             "
             href="https://www.linkedin.com/company/naturalwayofliving/" target="_blank"
             ><img
               style="
-                background-color: #8fadc9;
+               background-color:#ffffff;
                 max-width: 135px;
                 display: block;
               "
-              src="https://nwl-signature.netlify.app/images/linkedin-icon-2x.png"
+              src="https://nwl-signature.netlify.app/images/linkedin.png"
               alt="linkedin"
               height="24" /></a
           >&nbsp;<a
             style="
               display: inline-block;
               padding: 0px;
-              background-color: #8fadc9;
+             background-color:#ffffff;
             "
             href="https://www.instagram.com/naturalwayofliving/" target="_blank"
             ><img
               style="
-                background-color: #8fadc9;
+               background-color:#ffffff;
                 max-width: 135px;
                 display: block;
               "
-              src="https://nwl-signature.netlify.app/images/instagram-icon-2x.png"
+              src="https://nwl-signature.netlify.app/images/instagram.png"
               alt="instagram"
               height="24" /></a
           >&nbsp;<a
             style="
               display: inline-block;
               padding: 0px;
-              background-color: #8fadc9;
+             background-color:#ffffff;
             "
             href="https://www.youtube.com/NaturalWayofLiving" target="_blank"
             ><img
               style="
                 background-color: white;
-                max-width: 135px;
+                max-width: 24px;
                 display: block;
               "
-              src="https://nwl-signature.netlify.app/images/biggeryoutube.png"
+              src="./images/youtube.png"
               alt="youtube"
               height="24"
           /></a>
@@ -247,12 +247,12 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
                   <span
                     style="
                       display: block;
-                      background-color: #84ac7a;
+                      background-color: #ffffff;
                     "
                     ><img
                       style="
                         display: block;
-                        background-color: #84ac7a;
+                        background-color: #84ab79;
                       "
                       src="https://nwl-signature.netlify.app/images/email-icon-2x.png"
                       alt=""
@@ -277,12 +277,12 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
                   <span
                     style="
                       display: block;
-                      background-color: #84ac7a;
+                      background-color: #ffffff;
                     "
                     ><img
                       style="
                         display: block;
-                        background-color: #84ac7a;
+                        background-color: #84ab79;
                       "
                       src="https://nwl-signature.netlify.app/images/link-icon-2x.png"
                       alt=""
