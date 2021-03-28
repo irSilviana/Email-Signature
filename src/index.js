@@ -224,7 +224,7 @@ function handleSubmit(firstName, jobTitle, emailAddress) {
                 max-width: 24px;
                 display: block;
               "
-              src="./images/youtube.png"
+              src="https://nwl-signature.netlify.app/images/youtube.png"
               alt="youtube"
               height="24"
           /></a>
